@@ -10,3 +10,9 @@ def test(event, context):
     response = {"statusCode": 200, "body": json.dumps(body)}
 
     return response
+
+
+def createUser(event, context):
+    response = {"statusCode": 200}
+    
+    
