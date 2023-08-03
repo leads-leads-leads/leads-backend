@@ -10,8 +10,14 @@ provider:
 
 functions:
   test:
-    handler: handlers/user/creation.test
+    handler: handler.test
+    events:
+      - http:
+          path: test
+          method: post
+  joinWaitlist:
+    handler: handlers/user/waitlist.joinWaitlist
     events:
       - httpApi:
-          path: /andrea
-          method: get
+          path: /joinWaitlist
+          method: post
