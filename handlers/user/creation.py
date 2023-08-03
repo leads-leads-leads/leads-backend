@@ -7,6 +7,8 @@ def test(event, context):
         "input": event,
     }
 
+    print("please show up on cloudwatch")
+
     response = {"statusCode": 200, "body": json.dumps(body)}
 
     return response
@@ -14,5 +16,4 @@ def test(event, context):
 
 def createUser(event, context):
     response = {"statusCode": 200}
-    
-    
+
