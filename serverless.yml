@@ -1,0 +1,16 @@
+org: tripleleads
+app: leads-backend
+service: leads-backend
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  test:
+    handler: handlers/user/creation.test
+    events:
+      - httpApi:
+          path: /andrea
+          method: get
